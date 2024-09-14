@@ -56,12 +56,12 @@ allButtonFilter.forEach(el => {
   el.addEventListener("click", buttonClick)
 })
 
-function buttonClick() {
+function buttonClick(event) {
   // removing active
-  allButtonFilter.forEach(el => el.classList.remove)
-
+  allButtonFilter.forEach(el => el.classList.remove("active"))
 
   // addting the active
+  event.target.classList.add("active")
 
   // applying the filter active
 }
